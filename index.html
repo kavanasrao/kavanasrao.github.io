@@ -49,17 +49,46 @@
       padding: 0 20px;
     }
 
+    /* ICON GROW EFFECT */
     .socials {
       margin-top: 12px;
-      font-size: 28px;
+      font-size: 30px;
     }
 
     .socials a {
-      margin: 0 10px;
+      margin: 0 12px;
       color: #64b5ff;
+      display: inline-block;
+      transition: transform 0.25s ease, color 0.25s ease;
     }
 
-    .socials a:hover { color: #9cd1ff; }
+    .socials a:hover {
+      transform: scale(1.35);
+      color: #9cd1ff;
+    }
+
+    /* SKILLS GRID */
+    .skills-grid {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+    }
+
+    .skill-box {
+      background: #141414;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid #1f1f1f;
+      text-align: center;
+      font-size: 14px;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .skill-box:hover {
+      transform: scale(1.06);
+      background: #1d1d1d;
+    }
 
     .project, .job {
       margin-bottom: 22px;
@@ -68,15 +97,6 @@
     .project-title, .job-title {
       font-weight: 600;
       font-size: 20px;
-    }
-
-    .tag {
-      background: #1d1d1d;
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 13px;
-      margin-right: 6px;
-      border: 1px solid #333;
     }
 
     footer {
@@ -114,29 +134,38 @@
     Today, I build software systems with the same mindset — precise, scalable, and grounded in clear reasoning.
     <br><br>
     My interests sit at the intersection of engineering, cognition, and pattern-driven thinking.
-    I'm Kavana: a developer with a scientific background, a focus on backend systems, and a deep curiosity for how ideas translate into code and behavior.
+    I'm Kaval: a developer with a scientific background, a focus on backend systems, and a deep curiosity for how ideas translate into code and behavior.
     <br><br>
     My work reflects a blend of analytical thinking, technical execution, and continuous exploration.
   </p>
 
   <!-- SKILLS -->
   <h2>Technical Skills</h2>
-  <p>
-    <span class="tag">Python</span>
-    <span class="tag">Java</span>
-    <span class="tag">Django</span>
-    <span class="tag">Flask</span>
-    <span class="tag">Spring Boot</span>
-    <span class="tag">Git</span>
-    <span class="tag">MySQL</span>
-    <span class="tag">PostgreSQL</span>
-    <span class="tag">NumPy</span>
-    <span class="tag">Pandas</span>
-    <span class="tag">TensorFlow</span>
-    <span class="tag">PyTorch</span>
-    <span class="tag">Scikit-learn</span>
-    <span class="tag">HTML/CSS</span>
-  </p>
+
+  <div class="skills-grid">
+
+    <div class="skill-box">Python</div>
+    <div class="skill-box">Java</div>
+    <div class="skill-box">Django</div>
+    <div class="skill-box">Flask</div>
+    <div class="skill-box">Spring Boot</div>
+    <div class="skill-box">REST APIs</div>
+
+    <div class="skill-box">MySQL</div>
+    <div class="skill-box">PostgreSQL</div>
+    <div class="skill-box">Git & GitHub</div>
+
+    <div class="skill-box">NumPy</div>
+    <div class="skill-box">Pandas</div>
+    <div class="skill-box">TensorFlow</div>
+    <div class="skill-box">PyTorch</div>
+    <div class="skill-box">Scikit-learn</div>
+
+    <div class="skill-box">HTML & CSS</div>
+    <div class="skill-box">Postman</div>
+    <div class="skill-box">Jupyter</div>
+
+  </div>
 
   <!-- EXPERIENCE -->
   <h2>Experience</h2>
@@ -146,7 +175,7 @@
     <div class="job-date">Nov 2023 – Present</div>
     <ul>
       <li>Optimized backend logic and integrated AI-powered modules to enhance API accuracy and performance.</li>
-      <li>Designed and refined prompts for RLHF model evaluation, improving response accuracy by ~15%.</li>
+      <li>Designed refined RLHF evaluation prompts, improving response accuracy by ~15%.</li>
       <li>Debugged auto-generated code and ensured compliance with security and functionality standards.</li>
     </ul>
   </div>
@@ -155,8 +184,8 @@
     <div class="job-title">System Engineer — Infosys Ltd</div>
     <div class="job-date">Feb 2022 – July 2023</div>
     <ul>
-      <li>Developed backend systems using Java & Spring Boot for key enterprise applications.</li>
-      <li>Built APIs to streamline data flow and system integrations across platforms.</li>
+      <li>Developed backend systems using Java & Spring Boot for enterprise applications.</li>
+      <li>Built APIs to streamline data flow and improve system integrations.</li>
       <li>Collaborated with cross-functional teams to meet technical and business requirements.</li>
     </ul>
   </div>
@@ -167,8 +196,7 @@
   <div class="project">
     <div class="project-title">EcoBin — Smart Waste Segregation & Reward System</div>
     <p>
-      Backend for a smart IoT-enabled bin system with QR authentication, image-sensor validation, and 
-      weight-based reward generation.
+      Backend for a smart IoT-enabled bin system with QR authentication, image-sensor validation, and weight-based reward generation.
     </p>
   </div>
 
@@ -200,8 +228,9 @@
 </div>
 
 <footer>
-  © 2025 Kavana — Portfolio
+  © 2025 Kaval — Portfolio
 </footer>
 
 </body>
 </html>
+
