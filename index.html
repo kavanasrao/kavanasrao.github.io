@@ -1,76 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kavana S | Portfolio</title>
+
   <style>
     :root {
-      --primary-color: #4a90e2;
-      --accent-color: #50e3c2;
-      --text-color: #333;
-      --bg-color: #f0f4f8;
-      --card-bg: #ffffff;
-      --footer-color: #888;
+      --primary: #4a90e2;
+      --secondary: #50e3c2;
+      --text: #333;
+      --light: #f5f7fa;
+      --white: #fff;
+      --shadow: rgba(0, 0, 0, 0.08);
     }
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: var(--light);
+      color: var(--text);
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-top: 3rem;
     }
 
     h1 {
       font-size: 3rem;
-      color: var(--primary-color);
-      animation: jelly 0.6s ease forwards;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
     }
 
-    @keyframes jelly {
-      0% { transform: scale(1, 1); }
-      30% { transform: scale(1.25, 0.75); }
-      40% { transform: scale(0.75, 1.25); }
-      50% { transform: scale(1.15, 0.85); }
-      65% { transform: scale(0.95, 1.05); }
-      75% { transform: scale(1.05, 0.95); }
-      100% { transform: scale(1, 1); }
-    }
-
-    .intro {
+    .subtitle {
       font-size: 1.2rem;
-      max-width: 700px;
-      text-align: center;
-      line-height: 1.6;
-      margin-bottom: 2.5rem;
-      color: #444;
-    }
-
-    section {
-      max-width: 800px;
-      width: 100%;
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      color: #555;
       margin-bottom: 2rem;
     }
 
+    .container {
+      width: 90%;
+      max-width: 850px;
+    }
+
+    section {
+      background: var(--white);
+      padding: 1.8rem 2rem;
+      border-radius: 14px;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 14px var(--shadow);
+      transition: 0.2s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+    }
+
     section h2 {
+      color: var(--primary);
+      border-left: 4px solid var(--secondary);
+      padding-left: 0.6rem;
+      font-size: 1.6rem;
       margin-top: 0;
-      color: var(--primary-color);
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 0.3rem;
     }
 
     a {
-      color: var(--primary-color);
+      color: var(--primary);
       text-decoration: none;
+      font-weight: 500;
     }
 
     a:hover {
@@ -78,69 +83,83 @@
     }
 
     footer {
+      margin: 3rem 0 1rem;
+      text-align: center;
+      color: #777;
       font-size: 0.9rem;
-      color: var(--footer-color);
-      margin-top: auto;
-      padding-top: 1rem;
     }
   </style>
 </head>
+
 <body>
 
-  <h1>Kavana S</h1>
-
-  <p class="intro">
-    🧊 Once, I studied the lattice structures of matter.<br/>
-    💻 Now, I build structures in code.<br/>
-    🧘‍♀️ I ask deeper questions about meaning, consciousness, and silence.<br/>
-    🪷 A journal of logic, wonder, and the unseen.
-  </p>
-
-  <section>
-    <h2>About Me</h2>
-    <p>
-      Master’s in Solid State Physics | Software Developer | Curious Thinker | Tech Enthusiast
+  <header>
+    <h1>Kavana S</h1>
+    <p class="subtitle">
+      Physicist → Backend Developer · Python · Django · ML
     </p>
-  </section>
+  </header>
 
-  <section>
-    <h2>Contact</h2>
-    <p>
-      📧 Email: <a href="mailto:kavanasuresh2016@gmail.com">kavanasuresh2016@gmail.com</a><br/>
-      💻 GitHub: <a href="https://github.com/kavanasrao" target="_blank">kavanasrao</a>
-    </p>
-  </section>
+  <div class="container">
 
-  <section>
-    <h2>Blogs</h2>
-    <p>
-      📝 Medium: <a href="https://medium.com/@ks-rao" target="_blank">medium/Blog</a><br/>
-      📓 Notion: <a href="https://crystalline-output-3bf.notion.site/Home-Kaval-s-Reflections-20d2f9b0f87f80d3bdcedf2d584e1ee8?pvs=143" target="_blank">Notion Blog</a>
-    </p>
-  </section>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I’m a physicist turned software developer with a deep interest in
+        backend engineering, system design, and applied machine learning.
+        I enjoy building structured, scalable, and meaningful solutions.
+      </p>
+    </section>
 
-  <section>
-    <h2>Skills</h2>
-    <p>
-      ⚙️ Python, Java, JavaScript, HTML, CSS<br/>
-      🛠️ Django, Flask, SQL, Git, REST APIs<br/>
-    </p>
-  </section>
+    <section>
+      <h2>Skills</h2>
+      <p>
+        <strong>Languages:</strong> Python, Java, JavaScript, C++<br>
+        <strong>Frameworks:</strong> Django, Flask, REST APIs<br>
+        <strong>Tools:</strong> SQL, Git, Linux<br>
+        <strong>Other:</strong> Data Pipelines, ML Models, Problem Solving
+      </p>
+    </section>
 
-  <section>
-    <h2>Projects</h2>
-    <p>
-      🌐 <strong>Portfolio Site</strong> – Clean and animated personal portfolio built with HTML/CSS/JS<br/>
-      🤖 <strong>DhiTvam </strong> – Emotional AI chatbot (PyTorch + Flask + NRCLex) <br>
-      🌡️ <strong>Black Body Radiation Model </strong> – ML + Physics fusion (Scikit-learn)<br>
-    </p>
-  </section>
+    <section>
+      <h2>Projects</h2>
+      <p>
+        🔹 <strong>DhiTvam</strong> — Emotional AI chatbot  
+        <br>Tech: PyTorch, Flask, NRCLex
+        <br><br>
+
+        🔹 <strong>Black Body Radiation ML Model</strong> — Physics + ML  
+        <br>Tech: Scikit-learn, NumPy, Matplotlib
+        <br><br>
+
+        🔹 <strong>Portfolio Website</strong> — This site  
+        <br>Tech: HTML, CSS
+      </p>
+    </section>
+
+    <section>
+      <h2>Blogs</h2>
+      <p>
+        📝 Medium: <a href="https://medium.com/@ks-rao" target="_blank">My Articles</a><br>
+        📘 Notion: <a href="https://crystalline-output-3bf.notion.site" target="_blank">Personal Notes</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        📧 Email: <a href="mailto:kavanasuresh2016@gmail.com">kavanasuresh2016@gmail.com</a><br>
+        💻 GitHub: <a href="https://github.com/kavanasrao" target="_blank">github.com/kavanasrao</a><br>
+        🔗 LinkedIn: <em>(Add your link if you want)</em>
+      </p>
+    </section>
+
+  </div>
 
   <footer>
-    — Kaval ✍️
+    © 2025 · Built by Kavana
   </footer>
 
 </body>
 </html>
-
 
