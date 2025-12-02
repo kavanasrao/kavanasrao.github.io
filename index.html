@@ -3,163 +3,184 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kavana S | Portfolio</title>
 
   <style>
-    :root {
-      --primary: #4a90e2;
-      --secondary: #50e3c2;
-      --text: #333;
-      --light: #f5f7fa;
-      --white: #fff;
-      --shadow: rgba(0, 0, 0, 0.08);
-    }
-
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      background: var(--light);
-      color: var(--text);
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #f3f6fa;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 30px;
+      background: #ffffffcc;
+      backdrop-filter: blur(10px);
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
+      justify-content: flex-end;
+      gap: 25px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 10;
     }
-
-    header {
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    h1 {
-      font-size: 3rem;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      color: #555;
-      margin-bottom: 2rem;
-    }
-
-    .container {
-      width: 90%;
-      max-width: 850px;
-    }
-
-    section {
-      background: var(--white);
-      padding: 1.8rem 2rem;
-      border-radius: 14px;
-      margin-bottom: 2rem;
-      box-shadow: 0 6px 14px var(--shadow);
-      transition: 0.2s ease;
-    }
-
-    section:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
-    }
-
-    section h2 {
-      color: var(--primary);
-      border-left: 4px solid var(--secondary);
-      padding-left: 0.6rem;
-      font-size: 1.6rem;
-      margin-top: 0;
-    }
-
-    a {
-      color: var(--primary);
+    nav a {
       text-decoration: none;
+      color: #333;
       font-weight: 500;
     }
+    nav a:hover {
+      color: #4a90e2;
+    }
 
-    a:hover {
-      text-decoration: underline;
+    /* Sections */
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 100px 20px 60px;
+    }
+    h1, h2 {
+      color: #4a90e2;
+      margin-bottom: 15px;
+    }
+
+    /* Home Section */
+    #home {
+      text-align: center;
+      padding-top: 140px;
+    }
+    #home h1 span {
+      color: #4a90e2;
+    }
+    #home p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    /* Card look */
+    .card {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      margin-top: 15px;
+    }
+
+    ul {
+      margin-left: 20px;
+      line-height: 1.6;
     }
 
     footer {
-      margin: 3rem 0 1rem;
       text-align: center;
+      padding: 40px 10px;
       color: #777;
-      font-size: 0.9rem;
+    }
+
+    /* Simple fade animation */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s ease;
+    }
+    .show {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Kavana S</h1>
-    <p class="subtitle">
-      Physicist → Backend Developer · Python · Django · ML
-    </p>
-  </header>
+  <!-- Navbar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <div class="container">
+  <!-- HOME -->
+  <section id="home" class="fade">
+    <h1>Hello, I'm <span>Kavana S</span></h1>
+    <p>Physicist → Backend Developer.  
+    I build clean, structured, scalable systems.</p>
+  </section>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I’m a physicist turned software developer with a deep interest in
-        backend engineering, system design, and applied machine learning.
-        I enjoy building structured, scalable, and meaningful solutions.
-      </p>
-    </section>
+  <!-- ABOUT -->
+  <section id="about" class="fade">
+    <h2>About Me</h2>
+    <div class="card">
+      Master’s in Solid State Physics → Software Developer  
+      Passionate about backend design, clarity, and meaningful logic.
+    </div>
+  </section>
 
-    <section>
-      <h2>Skills</h2>
-      <p>
-        <strong>Languages:</strong> Python, Java, JavaScript, C++<br>
-        <strong>Frameworks:</strong> Django, Flask, REST APIs<br>
-        <strong>Tools:</strong> SQL, Git, Linux<br>
-        <strong>Other:</strong> Data Pipelines, ML Models, Problem Solving
-      </p>
-    </section>
+  <!-- SKILLS -->
+  <section id="skills" class="fade">
+    <h2>Skills</h2>
+    <div class="card">
+      <ul>
+        <li>Python, Java, JavaScript</li>
+        <li>Django, Flask, REST APIs</li>
+        <li>MySQL, SQL, Git</li>
+        <li>NumPy, Pandas, Scikit-learn</li>
+      </ul>
+    </div>
+  </section>
 
-    <section>
-      <h2>Projects</h2>
-      <p>
-        🔹 <strong>DhiTvam</strong> — Emotional AI chatbot  
-        <br>Tech: PyTorch, Flask, NRCLex
-        <br><br>
+  <!-- PROJECTS -->
+  <section id="projects" class="fade">
+    <h2>Projects</h2>
+    <div class="card">
+      <ul>
+        <li><strong>DhiTvam</strong> – Emotional AI Chatbot (Flask + PyTorch)</li>
+        <li><strong>Black Body Radiation Model</strong> – ML + Physics</li>
+        <li><strong>Portfolio Website</strong> – HTML/CSS/JS</li>
+      </ul>
+    </div>
+  </section>
 
-        🔹 <strong>Black Body Radiation ML Model</strong> — Physics + ML  
-        <br>Tech: Scikit-learn, NumPy, Matplotlib
-        <br><br>
-
-        🔹 <strong>Portfolio Website</strong> — This site  
-        <br>Tech: HTML, CSS
-      </p>
-    </section>
-
-    <section>
-      <h2>Blogs</h2>
-      <p>
-        📝 Medium: <a href="https://medium.com/@ks-rao" target="_blank">My Articles</a><br>
-        📘 Notion: <a href="https://crystalline-output-3bf.notion.site" target="_blank">Personal Notes</a>
-      </p>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>
-        📧 Email: <a href="mailto:kavanasuresh2016@gmail.com">kavanasuresh2016@gmail.com</a><br>
-        💻 GitHub: <a href="https://github.com/kavanasrao" target="_blank">github.com/kavanasrao</a><br>
-        🔗 LinkedIn: <em>(Add your link if you want)</em>
-      </p>
-    </section>
-
-  </div>
+  <!-- CONTACT -->
+  <section id="contact" class="fade">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:kavanasuresh2016@gmail.com">kavanasuresh2016@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/kavanasrao" target="_blank">kavanasrao</a></p>
+    </div>
+  </section>
 
   <footer>
-    © 2025 · Built by Kavana
+    — Built by Kavana ✨
   </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const fades = document.querySelectorAll('.fade');
+
+    const reveal = () => {
+      fades.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('show');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', reveal);
+    reveal();
+  </script>
 
 </body>
 </html>
-
