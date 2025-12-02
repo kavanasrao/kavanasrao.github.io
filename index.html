@@ -3,197 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kavana S | Portfolio</title>
+  <title>Kaval – Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
 
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: "Segoe UI", sans-serif;
-      background: #0d1117;
-      color: #e6e6e6;
-    }
-
-    /* Navbar */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 15px 30px;
-      background: rgba(13, 17, 23, 0.8);
-      backdrop-filter: blur(12px);
-      display: flex;
-      justify-content: flex-end;
-      gap: 25px;
-      border-bottom: 1px solid #21262d;
-      z-index: 10;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #c9d1d9;
-      font-weight: 500;
-      transition: 0.2s;
-    }
-
-    nav a:hover {
-      color: #58a6ff;
-    }
-
-    /* Sections */
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 100px 20px 60px;
-    }
-
-    h1, h2 {
-      color: #58a6ff;
-      margin-bottom: 15px;
-      letter-spacing: 0.5px;
-    }
-
-    /* Home */
-    #home {
-      text-align: center;
-      padding-top: 140px;
-    }
-
-    #home h1 span {
-      color: #79c0ff;
-    }
-
-    #home p {
-      font-size: 1.2rem;
-      color: #c9d1d9;
-      margin-top: 10px;
-    }
-
-    /* Cards */
-    .card {
-      background: #161b22;
-      padding: 25px 30px;
-      border-radius: 14px;
-      border: 1px solid #30363d;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
-      margin-top: 15px;
-    }
-
-    ul {
-      margin-left: 20px;
+      font-family: 'Inter', sans-serif;
+      background: #0d0d0d;
+      color: #eaeaea;
       line-height: 1.6;
     }
 
-    a {
-      color: #58a6ff;
+    a { color: #64b5ff; text-decoration: none; }
+    a:hover { color: #9cd1ff; }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    h2 {
+      border-left: 4px solid #64b5ff;
+      padding-left: 10px;
+      margin-top: 50px;
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .socials {
+      margin-top: 12px;
+      font-size: 28px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: #64b5ff;
+    }
+
+    .socials a:hover { color: #9cd1ff; }
+
+    .project, .job {
+      margin-bottom: 22px;
+    }
+
+    .project-title, .job-title {
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    .tag {
+      background: #1d1d1d;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      margin-right: 6px;
+      border: 1px solid #333;
     }
 
     footer {
       text-align: center;
-      padding: 40px 10px;
-      color: #8b949e;
+      padding: 40px 0 20px;
+      color: #666;
+      font-size: 14px;
+      margin-top: 40px;
     }
 
-    /* fade */
-    .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: 0.7s ease;
-    }
-    .show {
-      opacity: 1;
-      transform: translateY(0);
-    }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header>
+  <h1>Kavana S (Kaval)</h1>
 
-  <!-- HOME -->
-  <section id="home" class="fade">
-    <h1>Hello, I'm <span>Kavana S</span></h1>
-    <p>Physicist → Backend Developer  
-      Passionate about structured systems, clarity, and meaningful design.</p>
-  </section>
+  <!-- Social Icons -->
+  <div class="socials">
+    <a href="https://github.com/kavanas" target="_blank"><i class="ri-github-fill"></i></a>
+    <a href="https://linkedin.com/in/kavanas" target="_blank"><i class="ri-linkedin-fill"></i></a>
+    <a href="mailto:kavanasuresh2016@gmail.com" target="_blank"><i class="ri-mail-fill"></i></a>
+    <a href="https://ks-kaval.medium.com" target="_blank"><i class="ri-medium-fill"></i></a>
+    <a href="https://crystalline-output-3bf.notion.site/Home-Kaval-s-Reflections-20d2f9b0f87f80d3bdcedf2d584e1ee8" target="_blank"><i class="ri-book-2-fill"></i></a>
+  </div>
+</header>
+
+<div class="section">
 
   <!-- ABOUT -->
-  <section id="about" class="fade">
-    <h2>About Me</h2>
-    <div class="card">
-      Master’s in Solid State Physics → Backend Developer  
-      I enjoy working with logic-driven architectures, systems thinking,  
-      and clean backend design.
-    </div>
-  </section>
+  <h2>About Me</h2>
+  <p>
+    I started in physics, studying the structures and dynamics that shape the natural world.
+    Today, I build software systems with the same mindset — precise, scalable, and grounded in clear reasoning.
+    <br><br>
+    My interests sit at the intersection of engineering, cognition, and pattern-driven thinking.
+    I'm Kavana: a developer with a scientific background, a focus on backend systems, and a deep curiosity for how ideas translate into code and behavior.
+    <br><br>
+    My work reflects a blend of analytical thinking, technical execution, and continuous exploration.
+  </p>
 
   <!-- SKILLS -->
-  <section id="skills" class="fade">
-    <h2>Skills</h2>
-    <div class="card">
-      <ul>
-        <li>Python, Java, JavaScript</li>
-        <li>Django, Flask, REST APIs</li>
-        <li>SQL, MySQL, Git</li>
-        <li>NumPy, Pandas, Scikit-learn</li>
-      </ul>
-    </div>
-  </section>
+  <h2>Technical Skills</h2>
+  <p>
+    <span class="tag">Python</span>
+    <span class="tag">Java</span>
+    <span class="tag">Django</span>
+    <span class="tag">Flask</span>
+    <span class="tag">Spring Boot</span>
+    <span class="tag">Git</span>
+    <span class="tag">MySQL</span>
+    <span class="tag">PostgreSQL</span>
+    <span class="tag">NumPy</span>
+    <span class="tag">Pandas</span>
+    <span class="tag">TensorFlow</span>
+    <span class="tag">PyTorch</span>
+    <span class="tag">Scikit-learn</span>
+    <span class="tag">HTML/CSS</span>
+  </p>
+
+  <!-- EXPERIENCE -->
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="job-title">Software Developer — G2i (Remote)</div>
+    <div class="job-date">Nov 2023 – Present</div>
+    <ul>
+      <li>Optimized backend logic and integrated AI-powered modules to enhance API accuracy and performance.</li>
+      <li>Designed and refined prompts for RLHF model evaluation, improving response accuracy by ~15%.</li>
+      <li>Debugged auto-generated code and ensured compliance with security and functionality standards.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-title">System Engineer — Infosys Ltd</div>
+    <div class="job-date">Feb 2022 – July 2023</div>
+    <ul>
+      <li>Developed backend systems using Java & Spring Boot for key enterprise applications.</li>
+      <li>Built APIs to streamline data flow and system integrations across platforms.</li>
+      <li>Collaborated with cross-functional teams to meet technical and business requirements.</li>
+    </ul>
+  </div>
 
   <!-- PROJECTS -->
-  <section id="projects" class="fade">
-    <h2>Projects</h2>
-    <div class="card">
-      <ul>
-        <li><strong>DhiTvam</strong> – Emotional AI Chatbot (Flask + PyTorch)</li>
-        <li><strong>Black Body Radiation Model</strong> – ML + Physics fusion</li>
-        <li><strong>Portfolio Website</strong> – HTML/CSS/JS dark mode</li>
-      </ul>
-    </div>
-  </section>
+  <h2>Projects</h2>
 
-  <!-- CONTACT -->
-  <section id="contact" class="fade">
-    <h2>Contact</h2>
-    <div class="card">
-      <p>Email: <a href="mailto:kavanasuresh2016@gmail.com">kavanasuresh2016@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/kavanasrao" target="_blank">kavanasrao</a></p>
-    </div>
-  </section>
+  <div class="project">
+    <div class="project-title">EcoBin — Smart Waste Segregation & Reward System</div>
+    <p>
+      Backend for a smart IoT-enabled bin system with QR authentication, image-sensor validation, and 
+      weight-based reward generation.
+    </p>
+  </div>
 
-  <footer>
-    — Built with clarity ✨
-  </footer>
+  <div class="project">
+    <div class="project-title">FitFlex — Fitness Booking API</div>
+    <p>
+      Flask-based booking engine with timezone-aware schedules, validations, error-handling, and complete Postman docs.
+    </p>
+  </div>
 
-  <!-- Scroll Reveal Script -->
-  <script>
-    const fades = document.querySelectorAll('.fade');
+  <div class="project">
+    <div class="project-title">DhiTvam — Emotion-Aware Chatbot</div>
+    <p>
+      Deep-learning chatbot using NRCLex + PyTorch with emotion detection and context-aware response generation.
+    </p>
+  </div>
 
-    const reveal = () => {
-      fades.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          el.classList.add('show');
-        }
-      });
-    };
+  <!-- BLOGS -->
+  <h2>Blogs & Writing</h2>
+  <p>
+    📝 Medium: <a href="https://ks-kaval.medium.com" target="_blank">ks-kaval.medium.com</a><br>
+    📓 Notion: <a href="https://crystalline-output-3bf.notion.site/Home-Kaval-s-Reflections-20d2f9b0f87f80d3bdcedf2d584e1ee8" target="_blank">Kaval’s Reflections</a>
+  </p>
 
-    window.addEventListener('scroll', reveal);
-    reveal();
-  </script>
+  <!-- EDUCATION -->
+  <h2>Education</h2>
+  <p><strong>M.Sc. in Physics</strong> — University of Mysore (2019–2022)</p>
+
+</div>
+
+<footer>
+  © 2025 Kavana — Portfolio
+</footer>
 
 </body>
 </html>
