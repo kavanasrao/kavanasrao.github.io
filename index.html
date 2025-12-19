@@ -1,239 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kavana – Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kavana S</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Remix Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #0b0d10;
+  --card: #141821;
+  --text: #e6edf3;
+  --muted: #9aa4b2;
+  --accent: #58a6ff;
+}
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: #0d0d0d;
-      color: #eaeaea;
-      line-height: 1.6;
-    }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-    a { color: #64b5ff; text-decoration: none; }
-    a:hover { color: #9cd1ff; }
+a { color: var(--accent); text-decoration: none; }
 
-    header {
-      text-align: center;
-      padding: 60px 20px 20px;
-    }
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-      font-weight: 700;
-    }
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
 
-    h2 {
-      border-left: 4px solid #64b5ff;
-      padding-left: 10px;
-      margin-top: 50px;
-      font-size: 26px;
-      font-weight: 600;
-    }
+.typing {
+  color: var(--muted);
+  font-size: 1.2rem;
+  max-width: 700px;
+}
 
-    .section {
-      max-width: 900px;
-      margin: auto;
-      padding: 0 20px;
-    }
+.socials {
+  margin-top: 25px;
+}
+.socials a {
+  font-size: 30px;
+  margin: 0 12px;
+  display: inline-block;
+  transition: transform .3s ease;
+}
+.socials a:hover {
+  transform: scale(1.4);
+}
 
-    /* ICON GROW EFFECT */
-    .socials {
-      margin-top: 12px;
-      font-size: 30px;
-    }
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 80px 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .8s ease;
+}
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .socials a {
-      margin: 0 12px;
-      color: #64b5ff;
-      display: inline-block;
-      transition: transform 0.25s ease, color 0.25s ease;
-    }
+h2 {
+  font-size: 2rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+}
 
-    .socials a:hover {
-      transform: scale(1.35);
-      color: #9cd1ff;
-    }
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 20px;
+}
 
-    /* SKILLS GRID */
-    .skills-grid {
-      margin-top: 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 12px;
-    }
+/* Skills */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+.skill {
+  background: #1a2030;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform .3s ease;
+}
+.skill:hover { transform: scale(1.08); }
 
-    .skill-box {
-      background: #141414;
-      padding: 10px 14px;
-      border-radius: 10px;
-      border: 1px solid #1f1f1f;
-      text-align: center;
-      font-size: 14px;
-      transition: transform 0.25s ease, background 0.25s ease;
-    }
+/* Timeline */
+.timeline {
+  border-left: 2px solid #2a3550;
+  padding-left: 25px;
+}
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+}
 
-    .skill-box:hover {
-      transform: scale(1.06);
-      background: #1d1d1d;
-    }
-
-    .project, .job {
-      margin-bottom: 22px;
-    }
-
-    .project-title, .job-title {
-      font-weight: 600;
-      font-size: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 0 20px;
-      color: #666;
-      font-size: 14px;
-      margin-top: 40px;
-    }
-
-  </style>
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+}
+</style>
 </head>
 
 <body>
 
 <header>
   <h1>Kavana S </h1>
+  <div class="typing" id="typing"></div>
 
-  <!-- Social Icons -->
   <div class="socials">
     <a href="https://github.com/kavanasrao" target="_blank"><i class="ri-github-fill"></i></a>
-    <a href="https://www.linkedin.com/in/kavana-s-0759b3175/" target="_blank"><i class="ri-linkedin-fill"></i></a>
-    <a href="mailto:kavanasuresh2016@gmail.com" target="_blank"><i class="ri-mail-fill"></i></a>
+    <a href="https://linkedin.com/in/kavana-s-0759b3175/" target="_blank"><i class="ri-linkedin-fill"></i></a>
+    <a href="mailto:kavanasuresh2016@gmail.com"><i class="ri-mail-fill"></i></a>
     <a href="https://ks-kaval.medium.com" target="_blank"><i class="ri-medium-fill"></i></a>
     <a href="https://crystalline-output-3bf.notion.site/Home-Kaval-s-Reflections-20d2f9b0f87f80d3bdcedf2d584e1ee8" target="_blank"><i class="ri-book-2-fill"></i></a>
   </div>
 </header>
 
-<div class="section">
-
-  <!-- ABOUT -->
-  <h2>About Me</h2>
-<p>
-    I started in physics, studying the structures and dynamics that shape the natural world.
-    Today, I build software systems with the same mindset: precise, scalable, and grounded in clear reasoning.
-    <br><br>
-    My interests sit at the intersection of engineering, cognition, and pattern-driven thinking.
-    I'm Kavana: a developer with a scientific background, a focus on backend systems, and a deep curiosity for how ideas translate into code and behavior.
-    <br><br>
-    My work reflects a blend of analytical thinking, technical execution, and continuous exploration.
-    <br><br>
-    During my MSc, I served as an <strong>APS Student Ambassador</strong>, promoting physics outreach and engagement, reflecting my commitment to sharing knowledge and supporting scientific communities.
-</p>
-
-
-  <!-- SKILLS -->
-  <h2>Technical Skills</h2>
-
-  <div class="skills-grid">
-
-    <div class="skill-box">Python</div>
-    <div class="skill-box">Java</div>
-    <div class="skill-box">Django</div>
-    <div class="skill-box">Flask</div>
-    <div class="skill-box">Spring Boot</div>
-    <div class="skill-box">REST APIs</div>
-
-    <div class="skill-box">MySQL</div>
-    <div class="skill-box">PostgreSQL</div>
-    <div class="skill-box">Git & GitHub</div>
-
-    <div class="skill-box">NumPy</div>
-    <div class="skill-box">Pandas</div>
-    <div class="skill-box">TensorFlow</div>
-    <div class="skill-box">PyTorch</div>
-    <div class="skill-box">Scikit-learn</div>
-
-    <div class="skill-box">HTML & CSS</div>
-    <div class="skill-box">Postman</div>
-    <div class="skill-box">Jupyter</div>
-
-  </div>
-
-  <!-- EXPERIENCE -->
-  <h2>Experience</h2>
-
-  <div class="job">
-    <div class="job-title">Software Developer — G2i (Remote)</div>
-    <div class="job-date">Nov 2023 – Present</div>
-    <ul>
-      <li>Optimized backend logic and integrated AI-powered modules to enhance API accuracy and performance.</li>
-      <li>Designed refined RLHF evaluation prompts, improving response accuracy by ~15%.</li>
-      <li>Debugged auto-generated code and ensured compliance with security and functionality standards.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <div class="job-title">System Engineer — Infosys Ltd</div>
-    <div class="job-date">Feb 2022 – July 2023</div>
-    <ul>
-      <li>Developed backend systems using Java & Spring Boot for enterprise applications.</li>
-      <li>Built APIs to streamline data flow and improve system integrations.</li>
-      <li>Collaborated with cross-functional teams to meet technical and business requirements.</li>
-    </ul>
-  </div>
-
-  <!-- PROJECTS -->
-  <h2>Projects</h2>
-
-  <div class="project">
-    <div class="project-title">EcoBin — Smart Waste Segregation & Reward System</div>
-    <p>
-      Backend for a smart IoT-enabled bin system with QR authentication, image-sensor validation, and weight-based reward generation.
-    </p>
-  </div>
-
-  <div class="project">
-    <div class="project-title">FitFlex — Fitness Booking API</div>
-    <p>
-      Flask-based booking engine with timezone-aware schedules, validations, error-handling, and complete Postman docs.
-    </p>
-  </div>
-
-  <div class="project">
-    <div class="project-title">DhiTvam — Emotion-Aware Chatbot</div>
-    <p>
-      Deep-learning chatbot using NRCLex + PyTorch with emotion detection and context-aware response generation.
-    </p>
-  </div>
-
-  <!-- BLOGS -->
-  <h2>Blogs & Writing</h2>
-  <p>
-    📝 Medium: <a href="https://ks-kaval.medium.com" target="_blank">ks-kaval.medium.com</a><br>
-    📓 Notion: <a href="https://crystalline-output-3bf.notion.site/Home-Kaval-s-Reflections-20d2f9b0f87f80d3bdcedf2d584e1ee8" target="_blank">Kaval’s Reflections</a>
-  </p>
-
-  <!-- EDUCATION -->
-  <h2>Education</h2>
-  <p><strong>Physics Major</strong> — University of Mysore (2019–2021)</p>
-
+<section>
+<h2>About</h2>
+<div class="card">
+I started in physics, studying the structures and dynamics that shape the natural world.
+Today, I build backend systems with the same mindset — precise, scalable, and grounded in logic.
+<br><br>
+My interests lie at the intersection of engineering, cognition, and pattern-driven thinking.
 </div>
+</section>
+
+<section>
+<h2>Skills</h2>
+<div class="skills">
+  <div class="skill">Python</div>
+  <div class="skill">Java</div>
+  <div class="skill">Django</div>
+  <div class="skill">Flask</div>
+  <div class="skill">Spring Boot</div>
+  <div class="skill">REST APIs</div>
+  <div class="skill">MySQL</div>
+  <div class="skill">PostgreSQL</div>
+  <div class="skill">Git & GitHub</div>
+  <div class="skill">TensorFlow</div>
+  <div class="skill">PyTorch</div>
+  <div class="skill">Scikit-learn</div>
+</div>
+</section>
+
+<section>
+<h2>Experience</h2>
+<div class="timeline">
+  <div class="timeline-item">
+    <strong>G2i — Software Developer (AI & Backend)</strong><br>
+    Optimized Python backend logic, integrated AI workflows, improved model response quality by ~15%.
+  </div>
+  <div class="timeline-item">
+    <strong>Infosys — System Engineer</strong><br>
+    Built enterprise backend services using Java & Spring Boot with REST integrations.
+  </div>
+</div>
+</section>
+
+<section>
+<h2>Projects</h2>
+<div class="card"><strong>FitFlex</strong> — Fitness Booking API (Flask)</div>
+<div class="card"><strong>DhiTvam</strong> — Emotion-Aware Chatbot (PyTorch)</div>
+</section>
 
 <footer>
-  © 2025 Kavana — Portfolio
+© 2025 Kavana — Backend • Logic • Systems
 </footer>
+
+<script>
+/* Typing Effect */
+const text = "Backend Developer | Python • Java • AI Integration | Systems Thinker";
+let i = 0;
+const typing = document.getElementById("typing");
+function type() {
+  if (i < text.length) {
+    typing.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 40);
+  }
+}
+type();
+
+/* Scroll reveal */
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
+
 
