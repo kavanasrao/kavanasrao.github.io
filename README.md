@@ -45,9 +45,9 @@ Backend system built with Flask & SQLite featuring REST APIs, validation logic, 
 
 ## 🌱 Currently Focused On
 
-🔹 Advanced backend architecture
-🔹 Scalable API design
-🔹 AI-integrated backend systems
+- Advanced backend architecture
+- Scalable API design
+- AI-integrated backend systems
 
 ## 📜 Certifications
 
