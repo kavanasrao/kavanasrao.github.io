@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Kavana S</title>
 
-<!-- Icons -->
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -19,6 +18,7 @@
 }
 
 * { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -53,12 +53,14 @@ h1 {
 .socials {
   margin-top: 25px;
 }
+
 .socials a {
   font-size: 30px;
   margin: 0 12px;
   display: inline-block;
   transition: transform .3s ease;
 }
+
 .socials a:hover {
   transform: scale(1.4);
 }
@@ -71,6 +73,7 @@ section {
   transform: translateY(40px);
   transition: all .8s ease;
 }
+
 section.show {
   opacity: 1;
   transform: translateY(0);
@@ -89,12 +92,12 @@ h2 {
   margin-top: 20px;
 }
 
-/* Skills */
 .skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 15px;
 }
+
 .skill {
   background: #1a2030;
   padding: 12px;
@@ -102,17 +105,19 @@ h2 {
   text-align: center;
   transition: transform .3s ease;
 }
+
 .skill:hover { transform: scale(1.08); }
 
-/* Timeline */
 .timeline {
   border-left: 2px solid #2a3550;
   padding-left: 25px;
 }
+
 .timeline-item {
   margin-bottom: 30px;
   position: relative;
 }
+
 .timeline-item::before {
   content: "";
   position: absolute;
@@ -124,7 +129,6 @@ h2 {
   border-radius: 50%;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 40px;
@@ -136,7 +140,7 @@ footer {
 <body>
 
 <header>
-  <h1>Kavana S </h1>
+  <h1>Kavana S</h1>
   <div class="typing" id="typing"></div>
 
   <div class="socials">
@@ -144,17 +148,17 @@ footer {
     <a href="https://linkedin.com/in/kavana-s-0759b3175/" target="_blank"><i class="ri-linkedin-fill"></i></a>
     <a href="mailto:kavanasuresh2016@gmail.com"><i class="ri-mail-fill"></i></a>
     <a href="https://ks-kaval.medium.com" target="_blank"><i class="ri-medium-fill"></i></a>
-    <a href="https://crystalline-output-3bf.notion.site/Home-Kaval-s-Reflections-20d2f9b0f87f80d3bdcedf2d584e1ee8" target="_blank"><i class="ri-book-2-fill"></i></a>
   </div>
 </header>
 
 <section>
 <h2>About</h2>
 <div class="card">
-I started in physics, studying the structures and dynamics that shape the natural world.
-Today, I build backend systems with the same mindset — precise, scalable, and grounded in logic.
-<br><br>
-My interests lie at the intersection of engineering, cognition, and pattern-driven thinking.
+Backend Developer with professional experience building reliable and scalable backend systems using Python and Java.
+
+Currently working as a Software Developer (AI & Backend), contributing to REST API development, backend optimization, AI evaluation workflows, and production debugging.
+
+Focused on clean architecture, structured validation logic, and maintainable system design.
 </div>
 </section>
 
@@ -168,11 +172,11 @@ My interests lie at the intersection of engineering, cognition, and pattern-driv
   <div class="skill">Spring Boot</div>
   <div class="skill">REST APIs</div>
   <div class="skill">MySQL</div>
-  <div class="skill">PostgreSQL</div>
   <div class="skill">Git & GitHub</div>
   <div class="skill">TensorFlow</div>
-  <div class="skill">PyTorch</div>
+  <div class="skill">Pandas</div>
   <div class="skill">Scikit-learn</div>
+  <div class="skill">AWS (Basics)</div>
 </div>
 </section>
 
@@ -181,30 +185,51 @@ My interests lie at the intersection of engineering, cognition, and pattern-driv
 <div class="timeline">
   <div class="timeline-item">
     <strong>G2i — Software Developer (AI & Backend)</strong><br>
-    Optimized Python backend logic, integrated AI workflows, improved model response quality by ~15%.
+    Developed and optimized Python backend logic supporting AI workflows. Improved model evaluation accuracy (~20%) through refined validation and backend processing. Worked with REST APIs, SQL queries, Pandas, and TensorFlow in production environments.
   </div>
+
   <div class="timeline-item">
     <strong>Infosys — System Engineer</strong><br>
-    Built enterprise backend services using Java & Spring Boot with REST integrations.
+    Built enterprise backend services using Java and Spring Boot. Designed and integrated REST APIs to enable secure and scalable system communication.
   </div>
 </div>
 </section>
 
 <section>
 <h2>Projects</h2>
-<div class="card"><strong>FitFlex</strong> — Fitness Booking API (Flask)</div>
-<div class="card"><strong>DhiTvam</strong> — Emotion-Aware Chatbot (PyTorch)</div>
+
+<div class="card">
+<strong>Chat Intelligence API</strong> — AI-Driven Conversational Backend<br>
+Built a scalable REST API in Python for handling intelligent chat workflows, structured request-response handling, and clean validation logic.
+<br><br>
+<a href="https://github.com/kavanasrao/Chat_Intelligence_API" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+<strong>Planck Law Data Regression</strong> — Physics + ML Integration<br>
+Simulated radiation data using Planck’s Law and applied regression modeling with MySQL storage and visualization.
+<br><br>
+<a href="https://github.com/kavanasrao/planck-law-data-regression" target="_blank">View Project →</a>
+</div>
+
+<div class="card">
+<strong>Ecobin</strong> — Smart Waste Classification<br>
+Machine learning-based waste classification system for practical sustainability applications.
+<br><br>
+<a href="https://github.com/kavanasrao/Ecobin" target="_blank">View Project →</a>
+</div>
+
 </section>
 
 <footer>
-© 2025 Kavana — Backend • Logic • Systems
+© 2026 Kavana S — Backend • APIs • AI Systems
 </footer>
 
 <script>
-/* Typing Effect */
-const text = "Backend Developer | Python • Java • AI Integration | Systems Thinker";
+const text = "Backend Developer | Python • Java • REST APIs | AI-Integrated Systems";
 let i = 0;
 const typing = document.getElementById("typing");
+
 function type() {
   if (i < text.length) {
     typing.innerHTML += text.charAt(i);
@@ -214,8 +239,8 @@ function type() {
 }
 type();
 
-/* Scroll reveal */
 const sections = document.querySelectorAll("section");
+
 window.addEventListener("scroll", () => {
   sections.forEach(sec => {
     const top = sec.getBoundingClientRect().top;
