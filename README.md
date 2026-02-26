@@ -6,29 +6,29 @@ Backend Developer with experience building reliable, production-ready applicatio
 
 
 ## 💼 About Me
-🎓 M.Sc. in Physics – University of Mysore
-💻 Software Developer (AI & Backend) at G2i
-🏢 Former System Engineer at Infosys
-🧠 Strong in REST APIs, backend logic, validation, and debugging
+- 🎓 M.Sc. in Physics – University of Mysore
+- 💻 Software Developer (AI & Backend) at G2i
+- 🏢 Former System Engineer at Infosys
+- 🧠 Strong in REST APIs, backend logic, validation, and debugging
 
 I focus on writing clean, structured code and building systems that are stable, scalable, and maintainable.
 
 ## 🚀 What I Do
-🛠️ Develop backend applications using Python (Django, Flask) and Java (Spring Boot)
-🔗 Build and integrate REST APIs
-🗄️ Work with SQL databases (MySQL)
-📊 Perform data analysis and model evaluation using Pandas & TensorFlow
-🧪 Debug, validate, and optimize backend logic in production systems
-🤖 Contribute to AI model evaluation and RLHF-based improvements
+- 🛠️ Develop backend applications using Python (Django, Flask) and Java (Spring Boot)
+- 🔗 Build and integrate REST APIs
+- 🗄️ Work with SQL databases (MySQL)
+- 📊 Perform data analysis and model evaluation using Pandas & TensorFlow
+- 🧪 Debug, validate, and optimize backend logic in production systems
+- 🤖 Contribute to AI model evaluation and RLHF-based improvements
 
 ## 🧰 Tech Stack
-Languages: Python, Java
-Frameworks: Django, Flask, Spring Boot
-Databases: MySQL
-Libraries: NumPy, Pandas, TensorFlow, Scikit-learn, Matplotlib
-Tools: Git, GitHub, Postman, VS Code, Eclipse, Jupyter
-Cloud: AWS (Basic Concepts)
-Web: HTML, CSS
+- **Languages**: Python, Java
+- **Frameworks**: Django, Flask, Spring Boot
+- **Databases**: MySQL
+- **Libraries**: NumPy, Pandas, TensorFlow, Scikit-learn, Matplotlib
+- **Tools**: Git, GitHub, Postman, VS Code, Eclipse, Jupyter
+- **Cloud**: AWS (Basic Concepts)
+- **Web**: HTML, CSS
 
 ## 🔬 Featured Projects
 
